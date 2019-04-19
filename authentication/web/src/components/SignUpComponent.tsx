@@ -1,6 +1,6 @@
-import * as React from "react";
-import { ChangeEvent } from "react";
-import "../stylesheets/App.css";
+import * as React from 'react';
+import { ChangeEvent } from 'react';
+import '../stylesheets/App.css';
 
 interface PropsType {
   onClick: (
@@ -20,10 +20,10 @@ interface StateType {
 
 export class SignUpComponent extends React.Component<PropsType, StateType> {
   state = {
-    firstName: "EduarDO",
-    lastName: "MoRoNi",
-    email: "email@email.com",
-    password: "abc123",
+    firstName: 'EduarDO',
+    lastName: 'MoRoNi',
+    email: 'email@email.com',
+    password: 'abc123',
   };
 
   handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {

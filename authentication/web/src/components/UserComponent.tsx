@@ -1,6 +1,6 @@
-import * as React from "react";
-import "../stylesheets/App.css";
-import { User } from "core";
+import * as React from 'react';
+import '../stylesheets/App.css';
+import { User } from 'core';
 
 interface PropsType {
   user: User | null;

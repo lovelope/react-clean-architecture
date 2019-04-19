@@ -1,5 +1,5 @@
-import * as React from "react";
-import { connect } from "react-redux";
+import * as React from 'react';
+import { connect } from 'react-redux';
 import {
   Credential,
   signInAction,
@@ -8,15 +8,15 @@ import {
   User,
   userSelector,
   signUpAction,
-} from "core";
+} from 'core';
 
-import "../stylesheets/App.css";
-import { Header } from "./Header";
-import { AppWrapper } from "./AppWrapper";
-import { UserComponent } from "./UserComponent";
-import { SignInComponent } from "./SignInComponent";
-import { SignOutButton } from "./SignOutButton";
-import { SignUpComponent } from "./SignUpComponent";
+import '../stylesheets/App.css';
+import { Header } from './Header';
+import { AppWrapper } from './AppWrapper';
+import { UserComponent } from './UserComponent';
+import { SignInComponent } from './SignInComponent';
+import { SignOutButton } from './SignOutButton';
+import { SignUpComponent } from './SignUpComponent';
 
 interface Props {
   user: User | null;

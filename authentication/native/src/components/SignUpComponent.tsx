@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Button, Text, TextInput, View } from "react-native";
-import { styles } from "../stylesheets/styles";
+import * as React from 'react';
+import { Button, Text, TextInput, View } from 'react-native';
+import { styles } from '../stylesheets/styles';
 
 interface PropsType {
   onClick: (
@@ -20,10 +20,10 @@ interface StateType {
 
 export class SignUpComponent extends React.Component<PropsType, StateType> {
   state = {
-    firstName: "EduarDO",
-    lastName: "MoRoNi",
-    email: "other_email@fooemail.com",
-    password: "abc123",
+    firstName: 'EduarDO',
+    lastName: 'MoRoNi',
+    email: 'other_email@fooemail.com',
+    password: 'abc123',
   };
 
   handleChangeEmail = (email: string) => {
@@ -86,7 +86,7 @@ export class SignUpComponent extends React.Component<PropsType, StateType> {
             onChangeText={this.handleChangePassword}
             onSubmitEditing={this.handleSubmit}
             placeholder="Password"
-            returnKeyType={"done"}
+            returnKeyType={'done'}
             secureTextEntry
             value={this.state.password}
           />

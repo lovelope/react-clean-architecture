@@ -4,13 +4,13 @@ import {
   decrementCounterAction,
   incrementCounterAction,
   StateType,
-} from "core";
-import * as React from "react";
-import "../stylesheets/App.css";
-import { connect } from "react-redux";
-import { Header } from "./Header";
-import { CounterComponent } from "./Counter";
-import { AppWrapper } from "./AppWrapper";
+} from 'core';
+import * as React from 'react';
+import '../stylesheets/App.css';
+import { connect } from 'react-redux';
+import { Header } from './Header';
+import { CounterComponent } from './Counter';
+import { AppWrapper } from './AppWrapper';
 
 interface Props {
   counter: Counter;

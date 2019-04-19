@@ -1,7 +1,7 @@
-import * as React from "react";
-import { User } from "core";
-import { Text, View } from "react-native";
-import { styles } from "../stylesheets/styles";
+import * as React from 'react';
+import { User } from 'core';
+import { Text, View } from 'react-native';
+import { styles } from '../stylesheets/styles';
 
 interface PropsType {
   user: User | null;
