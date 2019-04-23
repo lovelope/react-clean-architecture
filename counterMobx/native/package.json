@@ -1,28 +1,29 @@
 {
-  "name": "counter-native",
+  "name": "counter-mobx-native",
   "version": "1.0.0",
-  "author": "eduardomoroni",
-  "license": "MIT",
+  "private": true,
   "scripts": {
     "preinstall": "cd ../core && npm install",
     "postinstall": "cd ../core && npm run build",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "react-native run-ios",
-    "android": "react-native run-android"
+    "android": "react-native run-android",
+    "clean": "react-native-clean-project"
   },
   "dependencies": {
     "core": "file:../core",
-    "react": "16.3.0-alpha.1",
-    "react-native": "0.54.3",
-    "react-redux": "5.0.7"
+    "mobx-react": "^5.4.3",
+    "react": "16.8.6",
+    "react-native": "0.59.5"
   },
   "devDependencies": {
-    "@types/jest": "22.2.2",
-    "@types/react": "16.0.41",
-    "@types/react-native": "0.52.19",
-    "@types/react-redux": "6.0.2",
-    "babel-preset-react-native": "4.0.0",
-    "react-native-typescript-transformer": "1.2.3",
-    "typescript": "2.8.1"
+    "@types/jest": "24.0.11",
+    "@types/react": "16.8.13",
+    "@types/react-native": "0.57.46",
+    "@types/react-redux": "7.0.7",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "react-native-clean-project": "^3.0.1",
+    "react-native-typescript-transformer": "1.2.12",
+    "typescript": "3.4.4"
   }
 }

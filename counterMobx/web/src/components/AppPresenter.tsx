@@ -1,4 +1,4 @@
-import { Counter, counterSelector, StoresType } from 'core';
+import { Counter, CounterStore } from 'core';
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import './App.css';
@@ -7,11 +7,7 @@ import { CounterComponent } from './Counter';
 import { AppWrapper } from './AppWrapper';
 
 interface Props {
-  counterStore?: {
-    counterInstance: Counter;
-    decrementAction: (qty: number) => void;
-    incrementAction: (qty: number) => void;
-  };
+  counterStore?: CounterStore;
 }
 
 function noop() {}

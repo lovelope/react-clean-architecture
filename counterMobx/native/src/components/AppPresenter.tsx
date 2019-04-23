@@ -1,25 +1,24 @@
-import {
-  Counter,
-  counterSelector,
-  decrementCounterAction,
-  incrementCounterAction,
-  StateType,
-} from 'core';
-import * as React from 'react';
-import { connect } from 'react-redux';
+import { Counter, CounterStore } from 'core';
+import React from 'react';
+import { inject, observer } from 'mobx-react';
 import { Header } from './Header';
 import { CounterComponent } from './Counter';
 import { AppWrapper } from './AppWrapper';
 
 interface IProps {
-  counter: Counter;
-  decrement: (qty: number) => void;
-  increment: (qty: number) => void;
+  counterStore?: CounterStore;
 }
 
+function noop() {}
+
 export const AppModel = (props: IProps) => {
-  const increment = () => props.increment(1);
-  const decrement = () => props.decrement(1);
+  const {
+    counterInstance = { count: 0 },
+    incrementAction = noop,
+    decrementAction = noop,
+  } = props.counterStore || {};
+  const increment = () => incrementAction(1);
+  const decrement = () => decrementAction(1);
 
   return (
     <AppWrapper>
@@ -27,22 +26,10 @@ export const AppModel = (props: IProps) => {
       <CounterComponent
         decrement={decrement}
         increment={increment}
-        counter={props.counter.count}
+        counter={counterInstance.count}
       />
     </AppWrapper>
   );
 };
 
-const mapStateToProps = (state: StateType) => ({
-  counter: counterSelector(state),
-});
-
-const mapDispatchToProps = {
-  decrement: decrementCounterAction,
-  increment: incrementCounterAction,
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(AppModel);
+export default inject('counterStore')(observer(AppModel));
