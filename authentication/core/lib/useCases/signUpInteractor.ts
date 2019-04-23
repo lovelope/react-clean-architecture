@@ -1,4 +1,4 @@
-import { Credential, User, Email } from "../entities";
+import { Credential, User, Email } from '../entities';
 
 export interface SignUpService {
   signUpUser: (user: User, credential: Credential) => Promise<User>;
@@ -15,14 +15,14 @@ export class SignUpInteractor {
   async signUp(
     firstName: string,
     lastName: string,
-    credential: Credential,
+    credential: Credential
   ): Promise<User> {
     const emailInUse = await this.signUpService.verifyExistingEmail(
-      credential._email,
+      credential._email
     );
     if (emailInUse) {
       throw new Error(
-        "There's an User with this email, if you forgot your pass...",
+        "There's an User with this email, if you forgot your pass..."
       );
     }
 

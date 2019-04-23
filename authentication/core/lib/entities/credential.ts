@@ -1,4 +1,4 @@
-import { Email } from "./email";
+import { Email } from './email';
 
 export class Credential {
   _email: Email;
@@ -6,7 +6,7 @@ export class Credential {
 
   constructor(email: string, password: string) {
     if (isInvalid(password)) {
-      throw new Error("Your password must contains only letter and numbers");
+      throw new Error('Your password must contains only letter and numbers');
     }
 
     this._password = password;

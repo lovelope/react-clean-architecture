@@ -1,4 +1,4 @@
-import {User} from "../../entities";
+import { User } from '../../entities';
 
 export interface StateType {
   readonly user: User | null;

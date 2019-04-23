@@ -24,7 +24,7 @@ interface Props {
   dispatchSignUp: (
     firstName: string,
     lastName: string,
-    credential: Credential,
+    credential: Credential
   ) => void;
   dispatchSignOut: () => void;
 }
@@ -36,7 +36,7 @@ export const AppModel = (props: Props) => {
     firstName: string,
     lastName: string,
     email: string,
-    password: string,
+    password: string
   ) =>
     props.dispatchSignUp(firstName, lastName, new Credential(email, password));
 
@@ -63,5 +63,5 @@ const mapDispatchToProps = {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(AppModel);

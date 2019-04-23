@@ -1,11 +1,11 @@
-import { all, call, put, takeLatest } from "redux-saga/effects";
-import { Credential, User } from "../../entities";
-import { updateUserAction } from "./user";
-import { SignInInteractor, SignUpInteractor } from "../../useCases";
-import { SampleService } from "../../services";
+import { all, call, put, takeLatest } from 'redux-saga/effects';
+import { Credential, User } from '../../entities';
+import { updateUserAction } from './user';
+import { SignInInteractor, SignUpInteractor } from '../../useCases';
+import { SampleService } from '../../services';
 
-export const SIGN_IN = "user/saga/sign_in";
-export const SIGN_UP = "user/saga/sign_up";
+export const SIGN_IN = 'user/saga/sign_in';
+export const SIGN_UP = 'user/saga/sign_up';
 
 interface SignInActionType {
   type: string;
@@ -27,7 +27,7 @@ export const signInAction = (credential: Credential): SignInActionType => ({
 export const signUpAction = (
   firstName: string,
   lastName: string,
-  credential: Credential,
+  credential: Credential
 ): SignUpActionType => ({
   type: SIGN_UP,
   credential,

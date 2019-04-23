@@ -2,12 +2,12 @@
   "description": "Working example to apply clean architecture to react codebases",
   "name": "react-clean-architecture",
   "version": "1.0.0",
-  "author": "eduardomoroni",
+  "author": "lovelope",
   "license": "MIT",
-  "homepage": "https://github.com/eduardomoroni/react-clean-architecture#readme",
+  "homepage": "https://github.com/lovelope/react-clean-architecture#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eduardomoroni/react-clean-architecture.git"
+    "url": "git+https://github.com/lovelope/react-clean-architecture.git"
   },
   "keywords": [
     "react",
@@ -16,7 +16,7 @@
     "boilerplate"
   ],
   "scripts": {
-    "prettier": "prettier --write '**/src/**/*.ts?(x)'"
+    "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,md}'"
   },
   "devDependencies": {
     "prettier": "1.17.0"

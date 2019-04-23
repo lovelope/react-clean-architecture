@@ -1,17 +1,17 @@
-import { Counter } from "../../entities";
-import { CounterInteractor } from "../../useCases";
-import { StateType } from "../../frameworks";
+import { Counter } from '../../entities';
+import { CounterInteractor } from '../../useCases';
+import { StateType } from '../../frameworks';
 
 type StateSliceType = Counter;
 
 type ActionType = {
-  type: string,
-  qty?: number,
+  type: string;
+  qty?: number;
 };
 
 const INITIAL_STATE = new Counter(0);
-const INCREMENT = "counter/increment";
-const DECREMENT = "counter/decrement";
+const INCREMENT = 'counter/increment';
+const DECREMENT = 'counter/decrement';
 
 export const counterSelector = (state: StateType): Counter => state.counter;
 
@@ -27,7 +27,7 @@ export const decrementCounterAction = (qty: number): ActionType => ({
 
 const incrementReducer = (
   counter: StateSliceType,
-  action: ActionType,
+  action: ActionType
 ): StateSliceType => {
   const interactor = new CounterInteractor(counter.count);
   interactor.increment(action.qty);
@@ -36,7 +36,7 @@ const incrementReducer = (
 
 const decrementReducer = (
   counter: StateSliceType,
-  action: ActionType,
+  action: ActionType
 ): StateSliceType => {
   const interactor = new CounterInteractor(counter.count);
   interactor.decrement(action.qty);
@@ -45,7 +45,7 @@ const decrementReducer = (
 
 export const counterReducer = (
   state: StateSliceType = INITIAL_STATE,
-  action: ActionType,
+  action: ActionType
 ): StateSliceType => {
   switch (action.type) {
     case INCREMENT:

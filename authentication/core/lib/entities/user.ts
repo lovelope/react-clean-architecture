@@ -1,4 +1,4 @@
-import { Email } from "./email";
+import { Email } from './email';
 
 export class User {
   _firstName: string;
@@ -7,7 +7,7 @@ export class User {
 
   constructor(firstName: string, lastName: string, email: string) {
     if (isEmptyOrNull(firstName) || isEmptyOrNull(lastName)) {
-      throw new Error("You must fill first name and last name");
+      throw new Error('You must fill first name and last name');
     }
 
     this._email = new Email(email);
